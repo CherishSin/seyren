@@ -137,10 +137,10 @@ public class SlackNotificationService implements NotificationService {
                 .replaceAll("Please fully define the feature '.*' in .",""));
         }
 
-        if (message.contains("http://grafana.je-labs.com")){
+        if (message.contains("//grafana.je-labs.com")){
             String[] parts = message.split("\\s+");
             for (String part: parts){
-                if (part.contains("http://grafana.je-labs.com")){
+                if (part.contains("//grafana.je-labs.com")){
                     dashUrl = part;
                 }
             }
